@@ -37,6 +37,7 @@ class MusicApp extends StatefulWidget {
 
 class _MusicAppState extends State<MusicApp> {
   List<Widget> myWidget= const [PlayMusic(), PlayFromNetwork(), PlayLocalFile()];
+  // لمعرفة الصفحة التي نحن فيها 
   int pageIndex= 0;
   selectPage(int val)
   {
