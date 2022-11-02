@@ -20,7 +20,9 @@ class _PlayMusicState extends State<PlayMusic> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    // هذه المكتبة لتشغيل الاناشيد داخل الهاتف او على الانترنت
     player = AudioPlayer();
+    // هذه المكتبة لتشغيل الاناشيد التي داخل التطبيق 
     cache = AudioCache(fixedPlayer: player);
     index =0;
    // cache.loadAll(['1.mp3','2.mp3','3.mp3', '4.mp3', '5.mp3']);
@@ -74,6 +76,25 @@ class _PlayMusicState extends State<PlayMusic> {
           ),
 
           Row(
+            
+            /* قبل هذا الراو كان فيه ازرار تقديم وتاخير الاغنية بمقدار 10 ثواني هكذا
+             children: [
+              IconButton(
+                icon: const Icon(Icons.first_page), iconSize: 35,
+                onPressed: (){}, 
+                ),
+              
+              IconButton(
+                icon: const Icon(Icons.play_arrow), iconSize: 35,
+                onPressed: (){}, 
+                ),
+
+
+              IconButton(
+              icon: const Icon(Icons.last_page), iconSize: 35,
+              onPressed: (){}, 
+              ),
+             */
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               IconButton(
