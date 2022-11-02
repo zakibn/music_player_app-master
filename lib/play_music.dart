@@ -54,6 +54,7 @@ class _PlayMusicState extends State<PlayMusic> {
             alignment: Alignment.center,
             color: Colors.indigo,
           ),
+          // السلايدر و التوقيت
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -63,6 +64,7 @@ class _PlayMusicState extends State<PlayMusic> {
                   child: Slider(
                       value: currentPostion.inSeconds.toDouble(),
                       max: musicLength.inSeconds.toDouble(),
+                    // كلما تغير نقطة السلايدر تتغير القيمة وتحديثها 
                       onChanged: (val){
                         seekTo(val.toInt());
                       })
